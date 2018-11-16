@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+
+body {
+  background: #eb01a5;
+  background-image: linear-gradient(#41295a, #2F0743);
+  color: #FFFFE7;
+  height: 100vh;
+}
+
+h1, {
+  font-size: 60px;
+  font-family: 'K2D', sans-serif;
+}
+
+.jumbotron {
+  background-image: linear-gradient(#2F0743, #41295a);
+}
+
+label {
+  size: 42px
+}
+
+h2 {
+  font-size: 20px;
+  font-family: 'K2D', sans-serif;
+  color: #FFFFE7;
+}
+
+
+input[type="text"]
+{
+    font-size:24px;
+}
