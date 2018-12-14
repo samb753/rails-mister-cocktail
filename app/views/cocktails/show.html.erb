@@ -5,21 +5,26 @@
 
 
 
-<div class="jumbotron">
-   <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pink_Lady_with_a_twist_of_lime,_in_a_cocktail_glass.jpg/1200px-Pink_Lady_with_a_twist_of_lime,_in_a_cocktail_glass.jpg", {:style => "height: 500px; width: 500px"}) %>
-<h2>Ingredients</h2>
+  <div class="jumbotron">
+    <%= cl_image_tag @cocktail.photo, {:style => "height: 500px; width: 500px"} %>
+   <h2>Ingredients</h2>
 
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li>
-    <label><%= dose.ingredient.name %> ( <%= dose.description %> )</label>
-    <%= link_to "🗑", dose_path(dose), method: :delete %>
-  </li>
-<% end %>
-</ul>
+   <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li>
+      <label><%= dose.ingredient.name %> ( <%= dose.description %> )</label>
+      <%= link_to "🗑", dose_path(dose), method: :delete %>
+    </li>
+    <% end %>
+  </ul>
 
-<p>Add an ingredient</p>
-<%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
-<btn><%= link_to "Go back", cocktails_path %></btn>
+  <p>Add an ingredient</p>
+  <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+  <btn><%= link_to "Go back", cocktails_path %></btn>
 </div>
 </div>
+
+
+
+
+

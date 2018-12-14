@@ -1,19 +1,13 @@
 // Specific CSS for your home-page
 
-body {
-  background: #eb01a5;
-  background-image: linear-gradient(#41295a, #2F0743);
-  color: #FFFFE7;
-  height: 100vh;
-}
-
 h1, {
   font-size: 60px;
   font-family: 'K2D', sans-serif;
 }
 
-.jumbotron {
-  background-image: linear-gradient(#2F0743, #41295a);
+body {
+  height: 3000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #ee0979 0%, #F33F51 51%, #ff6a00 85%);
 }
 
 label {
@@ -29,5 +23,31 @@ h2 {
 
 input[type="text"]
 {
-    font-size:24px;
+  font-size:24px;
+}
+
+
+
+.magnify:hover {
+  transform:scale(1.02);
+  transition: all 0.7s ease;
+}
+
+
+.cocktail-card {
+  height: 250px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.cocktail-cards-container {
+  justify-content: center;
+}
+
+.cocktail-card-title {
+  font-family: raleway;
+  font-size: 23px;
+  text-decoration: none;
+  color: #fffafa;
 }
