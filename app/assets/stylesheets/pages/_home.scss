@@ -6,7 +6,6 @@ h1, {
 }
 
 body {
-  height: 3000px; /* Used to enable scrolling */
   background: linear-gradient(55deg, #ee0979 0%, #F33F51 51%, #ff6a00 85%);
 }
 
@@ -26,6 +25,16 @@ input[type="text"]
   font-size:24px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+  text-decoration: none;
+  color: blue;
+  transition: all 0.7s ease;
+  }
+}
+
 
 
 .magnify:hover {
@@ -35,7 +44,7 @@ input[type="text"]
 
 
 .cocktail-card {
-  height: 250px;
+  height: 200px;
   width: 200px;
   margin: 15px;
   border-radius: 5px;
@@ -50,4 +59,23 @@ input[type="text"]
   font-size: 23px;
   text-decoration: none;
   color: #fffafa;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
+
+#cocktails-header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#home-container {
+  height: 100vh;
+}
+
+#home-header {
+  font-size: 70px;
+}
+
+
