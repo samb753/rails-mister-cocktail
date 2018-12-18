@@ -1,0 +1,15 @@
+#dose_description {
+  background: transparent;
+}
+
+#dose_ingredient_id {
+  background: transparent;
+}
+
+#cocktail-submit {
+  background: transparent;
+  &:hover {
+    background: white;
+    transition: 0.7 ease;
+  }
+}

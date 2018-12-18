@@ -3,12 +3,12 @@
   <div class="banner">
       <div class="banner-content">
         <h1 id="home-header">Mix World</h1>
+      <h2 id="cocktails-header">Choose a drink or <%= link_to "add your own", new_cocktail_path %></h2>
       </div>
   </div>
 
 
     <div class="container cocktail-cards-container">
-      <h2 id="cocktails-header"> Choose a drink or <%= link_to "add your own", new_cocktail_path %></h2>
         <div class="row" style="justify-content: center">
             <% @cocktails.each do |c| %>
               <div class="cocktail-card col-xs-12 col-sm-6 lg-4 magnify"
