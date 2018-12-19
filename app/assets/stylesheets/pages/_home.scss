@@ -1,1 +1,81 @@
 // Specific CSS for your home-page
+
+h1, {
+  font-size: 60px;
+  font-family: 'K2D', sans-serif;
+}
+
+body {
+  background: linear-gradient(55deg, #ee0979 0%, #F33F51 51%, #ff6a00 85%);
+}
+
+label {
+  size: 42px
+}
+
+h2 {
+  font-size: 20px;
+  font-family: 'K2D', sans-serif;
+  color: #FFFFE7;
+}
+
+
+input[type="text"]
+{
+  font-size:24px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+  text-decoration: none;
+  color: blue;
+  transition: all 0.7s ease;
+  }
+}
+
+
+
+.magnify:hover {
+  transform:scale(1.02);
+  transition: all 0.7s ease;
+}
+
+
+.cocktail-card {
+  height: 200px;
+  width: 200px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.cocktail-cards-container {
+  justify-content: center;
+}
+
+.cocktail-card-title {
+  font-family: raleway;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fffafa;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#cocktails-header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#home-container {
+  height: 100vh;
+}
+
+#home-header {
+  font-size: 70px;
+}
+
+

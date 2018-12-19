@@ -1,14 +1,25 @@
-<h1> Cocktails </h1>
+<div class="container" id="home-container">
 
-<div class="div">
-  <%  %>
+  <div class="banner">
+      <div class="banner-content">
+        <h1 id="home-header">Mix World</h1>
+      <h2 id="cocktails-header">Choose a drink or <%= link_to "add your own", new_cocktail_path %></h2>
+      </div>
+  </div>
+
+
+    <div class="container cocktail-cards-container">
+        <div class="row" style="justify-content: center">
+            <% @cocktails.each do |c| %>
+              <div class="cocktail-card col-xs-12 col-sm-6 lg-4 magnify"
+              style=" background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+              url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill unless c.photo.blank? %>')">
+              <div class="card-drink"> <h2 class="drink-name"><%= link_to c.name, cocktail_path(c), class: "cocktail-card-title" %></h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<ul>
-<% @cocktails.each do |c| %>
-<li><%= link_to c.name, cocktail_path(c) %></li>
-<% end %>
-
-</ul>
-
-<p> <%= link_to "Add a cocktail" %> </p>

@@ -17,12 +17,12 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to @cocktail
     else
-      render 'cocktails/new'
+      render 'new'
     end
   end
 
  private
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end

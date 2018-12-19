@@ -1,17 +1,27 @@
-<%= link_to "Go back", cocktails_path %>
+<div class="container-show">
+      <h1 id="cocktail-show-title"><%= @cocktail.name %></h1>
+  <div class="cocktail-show">
+    <div class="cocktail-photo">
+      <%= cl_image_tag @cocktail.photo, {:style => "height: 300px; width: 300px"} %>
+    </div>
+    <div class="cocktail-title-ingredients">
+    <div class="cocktail-ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li>
+      <label><%= dose.ingredient.name %> ( <%= dose.description %> )</label>
+      <%= link_to "🗑", dose_path(dose), method: :delete %>
+      </li>
+      <% end %>
+      <p>Add an ingredient</p>
+      <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+     <btn><%= link_to "Go back", cocktails_path %></btn>
+    </div>
+    </div>
+  </div>
+</div>
 
-<h1><%= @cocktail.name %></h1>
 
-<h2>Ingredients</h2>
 
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li>
-    <%= dose.ingredient.name %> ( <%= dose.description %> )
-    <%= link_to "🗑", dose_path(dose), method: :delete %>
-  </li>
-<% end %>
-</ul>
 
-<h2>Add an ingredient</h2>
-<%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
