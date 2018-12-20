@@ -4,7 +4,6 @@ ingredients = [
   "rum",
   "tequila",
   "vodka",
-  "vodka",
   "tomato juice",
   "coke",
   "lime",

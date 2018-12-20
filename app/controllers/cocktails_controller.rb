@@ -21,6 +21,12 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path, notice: "You just destroyed a cocktail. Why would you do that?"
+  end
+
  private
   def cocktail_params
     params.require(:cocktail).permit(:name, :photo)
