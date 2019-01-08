@@ -1,23 +1,29 @@
+<% photo = @cocktail.photo.url ? cl_image_path(@cocktail.photo, transformation: {height: 400}) : 'https://www.pexels.com/photo/close-up-photo-of-clear-drinking-glass-with-black-liquid-1282272' %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= photo %>);">
+  <div class="banner-content">
+    <h1> <%= @cocktail.name %> </h1>
+  </div>
+</div>
+
 <div class="container-show">
-      <h1 id="cocktail-show-title"><%= @cocktail.name %></h1>
   <div class="cocktail-show">
     <div class="cocktail-photo">
-      <%= cl_image_tag @cocktail.photo, {:style => "height: 300px; width: 300px"} %>
+      <p>Description:</p>
+    <!--   <%= cl_image_tag @cocktail.photo, {:style => "height: 300px; width: 300px"} %> -->
     </div>
     <div class="cocktail-title-ingredients">
     <div class="cocktail-ingredients">
       <p>Ingredients</p>
-      <ul>
     <% @cocktail.doses.each do |dose| %>
     <li>
-      <label><%= dose.ingredient.name %> <%= dose.description %>cl</label>
+      <%= dose.ingredient.name %> - <%= dose.description %>
       <%= link_to "⨯", dose_path(dose), method: :delete %>
       </li>
       <% end %>
-      <p>Add an ingredient</p>
       <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
-     <btn><%= link_to "Pick another", cocktails_path %></btn> |
-     <btn><%= link_to "Destroy this cocktail", cocktail_path(@cocktail), method: :delete %></btn>
+      <btn><%= link_to "Pick another", cocktails_path %></btn> |
+     <btn><%= link_to "Delete", cocktail_path(@cocktail), method: :delete %></btn>
     </div>
     </div>
   </div>
