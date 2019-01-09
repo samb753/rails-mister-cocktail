@@ -1,6 +1,7 @@
 
-#dose_description {
+#dose_description, #cocktail_name, #cocktail_description {
   background: transparent;
+  color: white;
 }
 
 #dose_ingredient_id {
@@ -13,4 +14,12 @@
     background: white;
     transition: 0.7 ease;
   }
+}
+
+#cocktail-new-container {
+  width: 30%;
+}
+
+#cocktail_photo {
+  display: flex;
 }
