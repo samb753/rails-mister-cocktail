@@ -82,6 +82,22 @@ cocktail8 = Cocktail.create!(
 cocktail8.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1547120866/tqxzslpqlje3qkpj7r2c.jpg'
 cocktail8.save!
 
+cocktail9 = Cocktail.create!(
+  name: 'Espresso Martini',
+  description: "A vodka martini, also known as a vodkatini or kangaroo cocktail, is a cocktail made with vodka and vermouth, a variation of a martini. A vodka martini is made by combining vodka, dry vermouth and ice in a cocktail shaker or mixing glass."
+  )
+
+cocktail9.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1547141689/cocktails/soho-grind-espresso-martini.jpg'
+cocktail9.save!
+
+cocktail10 = Cocktail.create!(
+  name: 'Margarita',
+  description: "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass. The drink is served shaken with ice, blended with ice, or without ice."
+  )
+
+cocktail10.remote_photo_url = 'https://res.cloudinary.com/dozuvnxwx/image/upload/v1547141831/cocktails/20150323-cocktails-vicky-wasik-margarita-1500x1125.jpg'
+cocktail10.save!
+
 puts "Done! 🍸🍹"
 
 
