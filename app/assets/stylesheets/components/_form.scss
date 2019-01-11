@@ -11,9 +11,13 @@
 
 #cocktail-submit {
   background: transparent;
+  border-radius: 3px;
+  padding: 5px;
   &:hover {
+    color: black;
     background: white;
-    transition: 0.7 ease;
+    transform:scale(1.02);
+    transition: all 0.7s ease;
   }
 }
 
@@ -24,3 +28,6 @@
 #cocktail_photo {
   display: flex;
 }
+
+
+

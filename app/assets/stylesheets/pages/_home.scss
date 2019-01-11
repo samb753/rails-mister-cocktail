@@ -34,7 +34,7 @@ a {
   color: white;
   &:hover {
   text-decoration: none;
-  color: blue;
+  color: #55ffed;
   transition: all 0.7s ease;
   }
 }
@@ -85,4 +85,23 @@ a {
   font-size: 84px
 }
 
+#banner-downarrow {
+  text-align: center;
+  padding-top: 10px;
+}
+
+// .home-banner-button {
+//   background: white;
+//   color: black;
+//   opacity: 0.5;
+//   border-radius: 3px;
+//   padding: 5px;
+//   border: 1px;
+//   &:hover {
+//     color: black;
+//     background: white;
+//     transform:scale(1.02);
+//     transition: all 0.7s ease;
+//   }
+// }
 
