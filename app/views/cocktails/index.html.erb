@@ -1,14 +1,12 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path("cocktails/alcohol-bar-beer-1283219.jpg", :effect=>"blur:355", :gravity=>"xy_center", :height=>642, :width=>1327, :crop=>"fill") %>); height: calc(100vh - 50px);">
 
-
-
       <div class="banner-content">
         <h1 id="home-header">Mix World</h1>
-      <h2 id="cocktails-header">Choose a drink or <%= link_to "add your own", new_cocktail_path %></h2>
+      <h2 id="cocktails-header"> <a href="#cocktail-cards">Choose a drink</a> or <%= link_to "add your own", new_cocktail_path %></h2>
       </div>
   </div>
 <div class="container" id="home-container">
-    <div class="container cocktail-cards-container">
+    <div class="container cocktail-cards-container" id="cocktail-cards">
         <div class="row" style="justify-content: center">
             <% @cocktails.each do |c| %>
               <div class="cocktail-card col-xs-12 col-sm-6 lg-4 magnify"
