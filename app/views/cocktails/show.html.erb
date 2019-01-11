@@ -1,24 +1,40 @@
+<% photo = @cocktail.photo.url ? cl_image_path(@cocktail.photo, transformation: {height: 400}) : 'https://www.pexels.com/photo/close-up-photo-of-clear-drinking-glass-with-black-liquid-1282272' %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= photo %>);">
+  <div class="banner-content">
+    <h1> <%= @cocktail.name %> </h1>
+  </div>
+</div>
+
 <div class="container-show">
-      <h1 id="cocktail-show-title"><%= @cocktail.name %></h1>
   <div class="cocktail-show">
-    <div class="cocktail-photo">
-      <%= cl_image_tag @cocktail.photo, {:style => "height: 300px; width: 300px"} %>
+    <div class="cocktail-description">
+      <div id="description-title-colorblock">
+      <h2 class="cocktail-show-header">Description:</h2>
+      </div>
+      <p><%= @cocktail.description %></p>
+      <div id="nav-icons">
+     <%= link_to '<i class="fas fa-step-backward"></i>'.html_safe, cocktails_path %> |
+     <%= link_to '<i class="fa fa-trash"></i>'.html_safe, cocktail_path(@cocktail), method: :delete %>
+      </div>
+    <!--   <%= cl_image_tag @cocktail.photo, {:style => "height: 300px; width: 300px"} %> -->
     </div>
     <div class="cocktail-title-ingredients">
     <div class="cocktail-ingredients">
-      <p>Ingredients</p>
-      <ul>
+      <h2 class="cocktail-show-header">Ingredients:</h2>
     <% @cocktail.doses.each do |dose| %>
-    <li>
-      <label><%= dose.ingredient.name %> <%= dose.description %>cl</label>
-      <%= link_to "⨯", dose_path(dose), method: :delete %>
+      <li>
+        <%= dose.ingredient.name %> - <%= dose.description %>
+        <%= link_to '<i class="fa fa-trash"></i>'.html_safe, dose_path(dose), method: :delete, id: "dose-delete-button" %>
       </li>
       <% end %>
-      <p>Add an ingredient</p>
+      <br>
+      <p id="ingredient-tip">Not how you like it? Add an ingredient below!</p>
       <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
-     <btn><%= link_to "Pick another", cocktails_path %></btn> |
-     <btn><%= link_to "Destroy this cocktail", cocktail_path(@cocktail), method: :delete %></btn>
     </div>
     </div>
   </div>
 </div>
+
+
+
