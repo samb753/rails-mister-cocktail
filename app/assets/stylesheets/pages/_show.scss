@@ -1,20 +1,26 @@
 .container-show {
   height: 100vh;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 .cocktail-show {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
-  padding-top: 1em;
+
 }
 
 .cocktail-description {
-  flex: 1 auto;
+  flex: 1;
+  margin-right: 5%;
 }
 
 .cocktail-title-ingredients {
-  padding-left: 5%;
+}
+
+.cocktail-show-header {
+  font-size: 25px;
 }
 
 #cocktail-show-title {
@@ -22,3 +28,19 @@
   font-size: 60px;
   color: floralwhite;
 }
+
+#description-title-colorblock {
+  color: blue;
+}
+
+#ingredient-tip {
+  font-size: 12px;
+  color: #ffe7e7;
+}
+
+#nav-icons {
+}
+
+// #dose-delete-button {
+//   font-size: 20px;
+// }
