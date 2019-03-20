@@ -54,15 +54,16 @@ body {
   background: linear-gradient(to right, #ff5858, #f857a6);
   min-height: 50px;
   margin-bottom: 0px;
+  background: transparent;
   .nav li > a, .navbar-brand {
     max-height: 50px;
     width: auto;
     background: transparent !important;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.2s ease-in-out;
     &:hover{
       background-color: rgba(255,255,255,0.2);
-      font-size: 14px;
+      font-size: 18px;
       .link {
         width: 100%;
         padding: 0 5px 0 5px;
